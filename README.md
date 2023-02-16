@@ -248,7 +248,7 @@ For advanced development we should refer below github actions and tools.
 ## New Theme Development Approaches
 
 1. Not customise legacy / premium themes and build new theme from scratch.
-  Why?
+
   - Usually legacy / premium themes have lots of styles/scripts/liquid codes that is not being used in new design and it causes performance issues and complexity of the structure.
   - It also forces developers to stick with existing theme structure and it blocks development of new feature sometimes.
   - Premium theme versions are usually being updated and it makes things complicated and unable to sync once theme has been built.
@@ -266,11 +266,12 @@ For advanced development we should refer below github actions and tools.
   - [React.JS](https://reactjs.org/) / [Vue.JS](https://vuejs.org/) for components
 
 5. Suggested attempts
+  - Json templates
   - No use of jQuery, and use vanilla js instead
   - Write section scripts as module with javascript (for example, using javascript class)
 
 ## Coding Style Guide
-  Please follow [GetBEM](https://getbem.com/) for front-end development
+  Highly recommend to follow [GetBEM](https://getbem.com/) for front-end development.
 
   1. HTML
   2. CSS
