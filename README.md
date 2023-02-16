@@ -233,18 +233,46 @@ For more advanced developers I strongly encourage you to use `git rebase` instea
 
 For advanced development we should refer below github actions and tools.
 
-1. [Shopify LightHouse CI] (https://github.com/Shopify/lighthouse-ci-action)
+1. [Shopify LightHouse CI](https://github.com/Shopify/lighthouse-ci-action)
   - We can get google light house ci status of current theme at any time
   - We can check how much impacts new commit / pull request has for performance
 
-2. [Shopify Theme Check Action] (https://github.com/Shopify/theme-check-action)
+2. [Shopify Theme Check Action](https://github.com/Shopify/theme-check-action)
   - We can force developers to follow development standards & best coding style guide
   - We will be able to check code quality for every commit / pull request so that we can keep clean code
   - We can automate this check with github action
 
-3. [Shopify Theme Inspector] (https://shopify.dev/docs/themes/tools/theme-inspector)
+3. [Shopify Theme Inspector](https://shopify.dev/docs/themes/tools/theme-inspector)
   - We can detect what part of theme code causes slow performance in live
 
-## New Theme Development
+## New Theme Development Approaches
+
+1. Not customise legacy / premium themes and build new theme from scratch.
+  Why?
+  - Usually legacy / premium themes have lots of styles/scripts/liquid codes that is not being used in new design and it causes performance issues and complexity of the structure.
+  - It also forces developers to stick with existing theme structure and it blocks development of new feature sometimes.
+  - Premium theme versions are usually being updated and it makes things complicated and unable to sync once theme has been built.
+  
+2. Framework for new theme development.
+  - [Shopify Packer](https://hayes0724.github.io/shopify-packer/) (highly recommend new themes)
+  - [Nx Shopify](https://trafilea.github.io/nx-shopify/) (recommended when need to use typescript)
+
+3. Framework for new theme development. (Headless)
+  - [Hydrogen](https://hydrogen.shopify.dev/)
+  - [Gatsby Shopify](https://github.com/gatsbyjs/gatsby-starter-shopify) (highly recommended)
+
+4. Tools
+  - [Tailwind CSS](https://tailwindcss.com/) for front-end framework
+  - [React.JS](https://reactjs.org/) / [Vue.JS](https://vuejs.org/) for components
+
+5. Suggested attempts
+  - No use of jQuery, and use vanilla js instead
+  - Write section scripts as module with javascript (for example, using javascript class)
+
 ## Coding Style Guide
-## Tools
+  Please follow [GetBEM](https://getbem.com/) for front-end development
+
+  1. HTML
+  2. CSS
+  3. JAVASCRIPT
+  4. LIQUID
