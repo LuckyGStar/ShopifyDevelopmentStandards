@@ -94,14 +94,14 @@
   ```
 
   3. Create a new branch for getting started with development.
-  > Feature/*** for new feature development and fix/*** for fixing bugs.
+  > feature/*** for new feature development and fix/*** for fixing bugs.
     
   ```bash
   $ git checkout -b feature/new-design
   $ git checkout -b fix/mobile-header-responsive-issue
   ```
 
-  4. If you already have branch worked on, just rebase with `develop` so that it is synced.
+  4. If you already have branch worked on, just rebase with `develop` branch so that it is synced.
   > If there are conflicts in rebase, please resolve it manually.
 
   ```bash
@@ -109,7 +109,7 @@
   $ git rebase develop
   ```
 
-  5. Login to the partners.
+  5. Login to the shopify partners.
 
   ```bash
   $ shopify login
@@ -173,10 +173,11 @@
   $ git push origin fix/mobile-header-responsive-issue
   ```
 
-  13. Connect the branch to the online store.
-  ![ScreenShot](https://prnt.sc/0rSNZGETZcZi)
+  13. Raise pull request against `develop` branch and ask for review.
+  14. Connect the branch to the online store.
+  [ScreenShot](https://prnt.sc/0rSNZGETZcZi)
 
-  14. Send the theme preview link to the client for review.
+  15. Send the theme preview link to the client for review.
   > Note: Please use the link based on theme id, not preview link generated with shopifypreview.com. It expires and not up-to-date.
   ```
   https://***.com/?preview_theme_id=theme_id
