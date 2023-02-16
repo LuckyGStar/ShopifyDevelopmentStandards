@@ -192,15 +192,59 @@
 Work In Progress...
 ```
 
-## Getting Started Development with Nx Shopify](https://trafilea.github.io/nx-shopify/)
+## Getting Started Development with [Nx Shopify](https://trafilea.github.io/nx-shopify/)
 ```
 Work In Progress...
 ```
 
 ## Git Best Approaches
 
+1. Run `git config --global push.default simple` in your terminal once. You don't need to do it every time you contribute, just once.
+
+2. Make sure you have latest `develop` locally:
+```
+git checkout develop
+git pull
+```
+
+3. Create a new branch based on it:
+```
+git checkout -b feature/my_feature_branch
+```
+
+4. Commit and open a Pull Request
+
+5. After code review is done and you update your branch, make sure that your Pull Requests is still mergeable.
+If there is a Github conflict with `develop`, and your branch is not merge-able anymore, pull the latest `develop` locally, then merge in your branch:
+```
+git checkout develop
+git pull
+git checkout feature/my_feature_branch
+git merge develop
+```
+
+6. Fix the conflicts and push your branch. Try to fix it yourself by looking into `develop` branch changes and Trello cards, and figuring out what final behavior should do - only ask for help if you did all you could. That's because we are all not full-time yet, and waiting for someone else for help with things like this really delays features by a lot. Always try to finish the card by yourself and make sure you did the best you could to finish it.
+
+7. Make sure your Github PR diff shows only changes relevant to your feature.
+
+For more advanced developers I strongly encourage you to use `git rebase` instead of `merge`. Double-check that your git push behaviour is set to simple: `git config --global push.default simple`
+
 ## CI/CD & Tools
 
+For advanced development we should refer below github actions and tools.
 
+1. [Shopify LightHouse CI] (https://github.com/Shopify/lighthouse-ci-action)
+  - We can get google light house ci status of current theme at any time
+  - We can check how much impacts new commit / pull request has for performance
+
+2. [Shopify Theme Check Action] (https://github.com/Shopify/theme-check-action)
+  - We can force developers to follow development standards & best coding style guide
+  - We will be able to check code quality for every commit / pull request so that we can keep clean code
+  - We can automate this check with github action
+
+3. [Shopify Theme Inspector] (https://shopify.dev/docs/themes/tools/theme-inspector)
+  - We can detect what part of theme code causes slow performance in live
+
+## New Theme Development
 ## Coding Style Guide
 ## Tools
