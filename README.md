@@ -174,16 +174,33 @@
   ```
 
   13. Raise pull request against `develop` branch and ask for review.
+  > Please put theme preview link, task link to the pull request comment. 
+  Will provide standard pull request format later.
+ 
   14. Connect the branch to the online store.
+  ````
   [ScreenShot](https://prnt.sc/0rSNZGETZcZi)
-
+  ````
   15. Send the theme preview link to the client for review.
   > Note: Please use the link based on theme id, not preview link generated with shopifypreview.com. It expires and not up-to-date.
   ```
   https://***.com/?preview_theme_id=theme_id
   ```
 
-## CI/CD
+## Getting Started Development with [Shopify Packer](https://hayes0724.github.io/shopify-packer/)
+```
+Work In Progress...
+```
+
+## Getting Started Development with Nx Shopify](https://trafilea.github.io/nx-shopify/)
+```
+Work In Progress...
+```
+
 ## Git Best Approaches
+
+## CI/CD & Tools
+
+
 ## Coding Style Guide
 ## Tools
