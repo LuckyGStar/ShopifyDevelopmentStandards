@@ -71,8 +71,8 @@
   Git branches should be connected to the online store and follow rules below.
 
   - Production theme (`master` branch)
-  - Staging theme (`develop` branch)
-  - Feature/Fix thems (`feature/fix` branches)
+  - Staging theme (`staging` branch)
+  - Feature/Fix thems (`ticket_id` branches)
 
 ## Getting Started Development with [Shopify Cli](https://shopify.dev/docs/themes/tools/cli)
 
@@ -90,7 +90,7 @@
 
   ```bash
   $ git pull origin develop
-  $ git rebase master
+  $ git merge master
   ```
 
   3. Create a new branch for getting started with development.
@@ -106,7 +106,7 @@
 
   ```bash
   $ git checkout fix/mobile-header-responsive-issue
-  $ git rebase develop
+  $ git merge develop
   ```
 
   5. Login to the shopify partners.
@@ -168,12 +168,12 @@
   11. Refresh your browser and you will see the updated theme.
   12. Once made all updates, push changes.
   ```bash
-  $ git add .
-  $ git commit -m "some commit message"
+  $ git add filenames
+  $ git commit -m "ticket_id: some commit message"
   $ git push origin fix/mobile-header-responsive-issue
   ```
 
-  13. Raise pull request against `develop` branch and ask for review.
+  13. Raise pull request against `staging` branch and ask for review.
   > Please put theme preview link, task link to the pull request comment. 
   Will provide standard pull request format later.
  
@@ -201,21 +201,21 @@ Work In Progress...
 
 1. Run `git config --global push.default simple` in your terminal once. You don't need to do it every time you contribute, just once.
 
-2. Make sure you have latest `develop` locally:
+2. Make sure you have latest `staging` locally:
 ```
-git checkout develop
+git checkout staging
 git pull
 ```
 
 3. Create a new branch based on it:
 ```
-git checkout -b feature/my_feature_branch
+git checkout -b ticket_id
 ```
 
 4. Commit and open a Pull Request
 
 5. After code review is done and you update your branch, make sure that your Pull Requests is still mergeable.
-If there is a Github conflict with `develop`, and your branch is not merge-able anymore, pull the latest `develop` locally, then merge in your branch:
+If there is a Github conflict with `staging`, and your branch is not merge-able anymore, pull the latest `develop` locally, then merge in your branch:
 ```
 git checkout develop
 git pull
@@ -223,11 +223,9 @@ git checkout feature/my_feature_branch
 git merge develop
 ```
 
-6. Fix the conflicts and push your branch. Try to fix it yourself by looking into `develop` branch changes and Trello cards, and figuring out what final behavior should do - only ask for help if you did all you could. That's because we are all not full-time yet, and waiting for someone else for help with things like this really delays features by a lot. Always try to finish the card by yourself and make sure you did the best you could to finish it.
+6. Fix the conflicts and push your branch. Try to fix it yourself by looking into `staging` branch changes and Jira cards, and figuring out what final behavior should do. Always try to finish the card by yourself and make sure you did the best you could to finish it.
 
 7. Make sure your Github PR diff shows only changes relevant to your feature.
-
-For more advanced developers I strongly encourage you to use `git rebase` instead of `merge`. Double-check that your git push behaviour is set to simple: `git config --global push.default simple`
 
 ## CI/CD & Tools
 
